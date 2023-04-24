@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+body, html, h1, h2, h3, h4, h5, h6, p, div, a { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+a { text-decoration: none; }
+
+.bck-image {
+    background-image: linear-gradient(rgba(0,0,0,0.3) 100%, rgba(0,0,0,0.3) 100% ), url("../img/background-img.jpg");
+    background-color: rgb(30, 30, 30);
+    background-size: cover;
+    background-position: center;
+    max-width: 2560px;
+    height: 1032px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    /* background: rgb(44, 77, 77); */
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.nav > a {
+    margin-right: 35px;
+    color: rgb(243, 241, 169);
+    transition: all 300ms ease-in-out;
+}
+
+.nav > a:last-child {
+    margin-right: 0;
+}
+
+.nav > a:hover {
+    color: rgb(16, 118, 252);
+}
+
+.logo {
+    color: rgb(255, 251, 143);
+    transition: all 300ms ease-in-out;
+}
+
+.logo:hover {
+    color: rgb(214, 5, 214);
+}
+.header-background {
+    backdrop-filter: blur(5px);
+    height: 80px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .header, .header-background {
+        display: none;
+    }
+}
+
+/* Mobile version */
+
+.mob-open, .mob-close {
+    width: 30px;
+    height: 30px;
+}
+
+.mob-open {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+}
+
+.mob-list {
+    height: 100%;
+    width: 35%;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    background-color: #2d3d4d;
+}
+
+.mob-list__item {
+    color: whitesmoke;
+}
+
+.mob-list__item:first-child {
+    margin-bottom: 150px;
+}
+
+.mob-close {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    z-index: 5;
+}
+
+@media screen and (min-width: 767px) {
+    .mob-menu {
+        display: none;
+    }
+}
+
+/* JavaScript */
+
+.opened {
+    opacity: 1;
+    animation: openAnim 250ms ease-in-out;
+}
+
+.close {
+    opacity: 0;
+    animation: closeAnim 250ms ease-in-out;
+}
+
+/* animation */
+
+@keyframes openAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes closeAnim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
